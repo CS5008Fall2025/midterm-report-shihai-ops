@@ -19,7 +19,7 @@ There are many ways we can implement the Fibonacci sequence in code, which will 
 | Version |  Big O | Space Used | 
 | :-- | :-- |  :-- |
 | Iterative | $O(n)$ | $O(1)$ |
-| Recursive | $O(2^n)$  | $O(2^n)$ or $O(n)$ |
+| Recursive | $O(2^n)$  | $O(n)$ |
 | Dynamic Programming | $O(n)$ | $O(n)$ |
 
 The iterative version uses only one loop, calculating each number from scratch, so the time complexity is O(n). It only needs to store the first two digits, so the spatial complexity is O(1). The pseudocode for the recursive version is as follows:
