@@ -198,5 +198,6 @@ To sum up, for calculating the Fibonacci sequence, the naive recursive method is
 
 ## References
 [1] Northeastern University. n.d. Memoization Example: Fibonacci Sequence (7–10). Retrieved October 19, 2025 from https://northeastern.instructure.com/courses/225849/pages/memoization-example-fibonacci-sequence-7-10?module_item_id=12387024
-
+[2] LeetCode. n.d. Fibonacci Number — Solutions. Retrieved October 19, 2025, from https://leetcode.com/problems/fibonacci-number/solutions/
+[3] opes. 2012. How does the fibonacci recursive function “work”? Stack Overflow. Retrieved October 19, 2025, from https://stackoverflow.com/questions/8845154/how-does-the-fibonacci-recursive-function-work
 
