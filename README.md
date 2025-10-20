@@ -5,7 +5,7 @@
 * **Semester**: Fall 2025
 * **Languages Used**: c, Python
 
-> You are free to rename/ modify these sections as you need (and don't forget to remove this line..)
+
 
 ## Overview
 This report focuses on the speed differences between different implementations of the Fibonacci Series. It is worth mentioning that this sequence was popularized to the Western world by Leonardo of Pisa, or Fibonacci, in the early 13th century, but its concept appeared in Indian mathematics centuries ago.
@@ -62,7 +62,7 @@ To compute Fib(n), the function calls Fib(n-1) and Fib(n-2). These two calls eac
 
 ### The dynamic planning version
 
-The dynamic planning version uses a recurrence tree as below:
+The dynamic planning version uses a recurrence tree as below: 
 
 ![Recurrence Tree](recurrenceTree2.png) [1]
 
@@ -92,7 +92,7 @@ return r[n]
 For this analysis, I chose Python as my second language. Aside from being a well-known language, the main reason is that it provides auxiliary functions such as lru_cache and cache in the built-in FuncTools library, greatly simplifying the implementation of dynamic programming. Moreover, it is the language I am most familiar with. The Pandas package is an excellent tool in this program when drawing a statistical diagram. These characters make it easier for me to experiment with these built-in tools while using a language designed for rapid development and experimentation.
 
 ## Empirical Data & Discussion 
-The text script is used the same test script provided in the example project. ([test script]).
+The text script is used the same test script provided in the example project. [test script](test_runner.py).
 
 ### Operations Comparsion
 The way to count the operation number is by adding a counter to functions in each different programs. The counter will add 1 when every operation has been made, such as a loop run once, or the function itself has been called once. 
@@ -148,17 +148,21 @@ The recursive version is the only version which runs at the time complexity of $
 ![dynamic vs recursive](fib_recursive_dynamic_comparison.png) As the diagram shows the C is significantly faster than Python. (n = 40)
 
 ### Iterative and Dynamic Programming Versions
-After N>40, there is no data being tested on the Recursive method since the time complexity grows exponentially. ![fib_iter_dynamic_comparison.png]
+After N>40, there is no data being tested on the Recursive method since the time complexity grows exponentially. ![fib_iter_dynamic_comparison.png](fib_iter_dynamic_comparison.png)
 You can see Python is slower than C, and the Dynamic Programming is slightly slower than the Iterative method. The Python run time jumps for several times is probably because I run Python in WSL VM which is not very stable when performing multi tasks. 
 ## Language Analysis
-
+The code writing files are shown below:
+*[fibonacci.c](fibonacci.c)  -- implements fibonacci in C. 
+*[fibonacci.py](fibonacci.py)    -- implements fibonacci in python. 
+*[test_runner.py](test_runner.py)    -- check ogs and timings and output to .csv
+C is a very challenging language. The data type, structs, and pointers, and heaps are very unfriendly to new learners.  Meanwhile, Python is much easier to get hands-on with new algorithms learned. I am more familiar with Python, so I always try to code with Python first, with pseudo code provided by the lecturer. Once the Python version is done correctly, I will begin to work on the C version. 
 
 ### Language 1: C
-C is always faster than Python in all cases, but the difference is not significant compared to the different method you use to solve the Fibonacci sequence. 
+C is always faster than Python in all cases in this project, but the difference is not significant compared to the different method you use to solve the Fibonacci sequence. 
 
 
 ### Language 2: Python
-The code writing files have shown below:
+
 
 
 ### Comparison and Discussion Between Experiences
