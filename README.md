@@ -42,18 +42,19 @@ FUNCTION Fib_iter(n)
     RETURN b
 END FUNCTION
 ```
-The recursive version uses a recurrence tree as below
+The recursive version uses a recurrence tree as below:
 
 ![Recurrence Tree](recurrenceTree.png)
 
 
+Since every division of the tree connects to two more divisions, the big O time complexity would be $O(2^n)$ . 
 The pseudocode for the recursive version is as follows:
 ```Plaintext
 Function Fib(n)
     if n <= 1: return n
     return Fib(n - 1) + Fib(n - 2)
 ```
-To compute Fib(n), the function calls Fib(n-1) and Fib(n-2). These two calls each generate more calls, resulting in exponential increases in the number of calculations. This results in a time complexity of O(2 
+ To compute Fib(n), the function calls Fib(n-1) and Fib(n-2). These two calls each generate more calls, resulting in exponential increases in the number of calculations. This results in a time complexity of O(2 
 n), but since the depth of the call stack is up to n, the spatial complexity is O(n).
 
 The dynamic planning version stores the calculation results for each Fib(i) (a process called "memory"). When a value is needed again, it can be fetched directly from storage at constant time without recalculation. This effectively cuts out the duplicate recursive branches, reducing time complexity to O(n) at the cost of requiring O(n) of space to store the results.
