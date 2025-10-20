@@ -44,7 +44,7 @@ FUNCTION Fib_iter(n)
     RETURN b
 END FUNCTION
 ```
-### recursive version
+### Recursive version
 
 The recursive version uses a recurrence tree as below:
 
@@ -66,12 +66,12 @@ The dynamic planning version uses a recurrence tree as below:
 
 ![Recurrence Tree](recurrenceTree2.png) [1]
 
-Since the memorization technique reduced the duplicated calculation in the recursive version, the tree is reduced to only the left side. Hence, the program only goes over the tree once, leaving the time complexity to O(n). The result for each level of the tree is stored in memory. Hence, the 
+Since the memorization technique reduced the duplicated calculation in the recursive version, the tree is reduced to only the left side. Hence, the program only goes over the tree once, leaving the time complexity to O(n). The result for each level of the tree is stored in memory. Hence, it requires a memory complexity of O(n) to store it.
 
 ![Recurrence Tree](recurrenceTree2exp.png) [1]
 
 
-The dynamic planning version stores the calculation results for each Fib(i) (a process called "memory"). When a value is needed again, it can be fetched directly from storage at constant time without recalculation. This effectively cuts out the duplicate recursive branches, reducing time complexity to O(n), and the result for each level of the tree is stored in memory; hence, it requires memory complexity of O(n) to store it.
+The dynamic planning version stores the calculation results for each Fib(i). When a value is needed again, it can be fetched directly from storage at constant time without recalculation. This effectively cuts out the duplicate recursive branches, reducing time complexity to O(n), and the result for each level of the tree is stored in memory; hence, it requires memory complexity of O(n) to store it.
 
 For this analysis, I chose Python as my second language. Aside from being a well-known language, the main reason is that it provides auxiliary functions such as lru_cache and cache in the built-in FuncTools library, greatly simplifying the implementation of dynamic programming. Moreover, it is the language I am most familiar with. This makes it easy for me to experiment with these built-in tools while using a language designed for rapid development and experimentation.
 
