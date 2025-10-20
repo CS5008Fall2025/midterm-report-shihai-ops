@@ -152,10 +152,10 @@ After N>40, there is no data being tested on the Recursive method since the time
 You can see Python is slower than C, and the Dynamic Programming is slightly slower than the Iterative method. The Python run time jumps for several times is probably because I run Python in WSL VM which is not very stable when performing multi tasks. 
 ## Language Analysis
 The code writing files are shown below:
-*[fibonacci.c](fibonacci.c)  -- implements fibonacci in C. 
-*[fibonacci.py](fibonacci.py)    -- implements fibonacci in python. 
-*[test_runner.py](test_runner.py)    -- check ogs and timings and output to .csv
-C is a very challenging language. The data type, structs, and pointers, and heaps are very unfriendly to new learners.  Meanwhile, Python is much easier to get hands-on with new algorithms learned. I am more familiar with Python, so I always try to code with Python first, with pseudo code provided by the lecturer. Once the Python version is done correctly, I will begin to work on the C version. 
+* [fibonacci.c](fibonacci.c)  -- implements fibonacci in C. 
+* [fibonacci.py](fibonacci.py)    -- implements fibonacci in python. 
+* [test_runner.py](test_runner.py)    -- check ogs and timings and output to .csv
+C is a very challenging language. The data type, structs, and pointers, and heaps are very unfriendly to new learners.  Meanwhile, Python is much easier to get hands-on with new algorithms learned. I am more familiar with Python, so I always try to code with Python first, with pseudo-code provided by the lecturer. Once the Python version is done correctly, I will begin to work on the C version. 
 
 ### Language 1: C
 C is always faster than Python in all cases in this project, but the difference is not significant compared to the different method you use to solve the Fibonacci sequence. 
