@@ -89,10 +89,18 @@ return r[n]
 ``` 
  [1]
 
-For this analysis, I chose Python as my second language. Aside from being a well-known language, the main reason is that it provides auxiliary functions such as lru_cache and cache in the built-in FuncTools library, greatly simplifying the implementation of dynamic programming. Moreover, it is the language I am most familiar with. This makes it easier for me to experiment with these built-in tools while using a language designed for rapid development and experimentation.
+For this analysis, I chose Python as my second language. Aside from being a well-known language, the main reason is that it provides auxiliary functions such as lru_cache and cache in the built-in FuncTools library, greatly simplifying the implementation of dynamic programming. Moreover, it is the language I am most familiar with. The Pandas package is an excellent tool in this program when drawing a statistical diagram. These characters make it easier for me to experiment with these built-in tools while using a language designed for rapid development and experimentation.
 
 ## Empirical Data & Discussion 
 
+### Operations Comparsion
+The way to count the operation number is by adding a counter to functions in each different programs. The counter will add 1 when every operation has been made, such as a loop run once, or the function itself has been called once. 
+
+The first 40 rows of the triangle are shown in the chart below. If I set n > 40, the time consumed by the recursive method is very significant. Since it has an exponential growth in time complexity. 
+
+
+#### Operation Count
+[ops_fib_c_results.csv](ops_fib_c_results.csv)
 
 ## Language Analysis
 
