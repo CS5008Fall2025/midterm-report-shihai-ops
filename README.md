@@ -22,6 +22,8 @@ There are many ways we can implement the Fibonacci sequence in code, which will 
 | Recursive | $O(2^n)$  | $O(n)$ |
 | Dynamic Programming | $O(n)$ | $O(n)$ |
 
+### Iterative version
+
 The iterative version uses only one for loop, calculating each number from scratch, so the time complexity is O(n). It only needs to store the first two digits, so the spatial complexity is O(1). 
 The pseudocode for the iterative method version is as follows:
 ```Plaintext
@@ -42,9 +44,11 @@ FUNCTION Fib_iter(n)
     RETURN b
 END FUNCTION
 ```
+### recursive version
+
 The recursive version uses a recurrence tree as below:
 
-![Recurrence Tree](recurrenceTree.png)
+![Recurrence Tree](recurrenceTree.png) [1]
 
 
 Since every division of the tree connects to two more divisions, the big O time complexity would be $O(2^n)$ . 
@@ -54,10 +58,20 @@ Function Fib(n)
     if n <= 1: return n
     return Fib(n - 1) + Fib(n - 2)
 ```
- To compute Fib(n), the function calls Fib(n-1) and Fib(n-2). These two calls each generate more calls, resulting in exponential increases in the number of calculations. This results in a time complexity of O(2 
-n), but since the depth of the call stack is up to n, the spatial complexity is O(n).
+To compute Fib(n), the function calls Fib(n-1) and Fib(n-2). These two calls each generate more calls, resulting in exponential increases in the number of calculations. This results in a time complexity of $O(2^n)$, but since the depth of the call stack is up to n, the spatial complexity is O(n).
 
-The dynamic planning version stores the calculation results for each Fib(i) (a process called "memory"). When a value is needed again, it can be fetched directly from storage at constant time without recalculation. This effectively cuts out the duplicate recursive branches, reducing time complexity to O(n) at the cost of requiring O(n) of space to store the results.
+### The dynamic planning version
+
+The dynamic planning version uses a recurrence tree as below:
+
+![Recurrence Tree](recurrenceTree2.png) [1]
+
+Since the memorization technique reduced the duplicated calculation in the recursive version, the tree is reduced to only the left side. Hence, the program only goes over the tree once, leaving the time complexity to O(n). The result for each level of the tree is stored in memory. Hence, the 
+
+![Recurrence Tree](recurrenceTree2exp.png) [1]
+
+
+The dynamic planning version stores the calculation results for each Fib(i) (a process called "memory"). When a value is needed again, it can be fetched directly from storage at constant time without recalculation. This effectively cuts out the duplicate recursive branches, reducing time complexity to O(n), and the result for each level of the tree is stored in memory; hence, it requires memory complexity of O(n) to store it.
 
 For this analysis, I chose Python as my second language. Aside from being a well-known language, the main reason is that it provides auxiliary functions such as lru_cache and cache in the built-in FuncTools library, greatly simplifying the implementation of dynamic programming. Moreover, it is the language I am most familiar with. This makes it easy for me to experiment with these built-in tools while using a language designed for rapid development and experimentation.
 
@@ -81,4 +95,4 @@ For this analysis, I chose Python as my second language. Aside from being a well
 ## Conclusions / Reflection
 
 ## References
-
+[1] Northeastern University. n.d. Memoization Example: Fibonacci Sequence (7–10). Retrieved October 19, 2025 from https://northeastern.instructure.com/courses/225849/pages/memoization-example-fibonacci-sequence-7-10?module_item_id=12387024
