@@ -75,6 +75,7 @@ The dynamic planning version stores the calculation results for each Fib(i). Whe
 The pseudocode for the dynamic programming version is as follows:
 
 r = array from [0..n]
+
 n = nth fibonacci number
 ```markdown
 FIBONACCI(n, r)
