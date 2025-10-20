@@ -73,7 +73,7 @@ Since the memorization technique reduced the duplicated calculation in the recur
 
 The dynamic planning version stores the calculation results for each Fib(i). When a value is needed again, it can be fetched directly from storage at constant time without recalculation. This effectively cuts out the duplicate recursive branches, reducing time complexity to O(n), and the result for each level of the tree is stored in memory; hence, it requires memory complexity of O(n) to store it.
 
-For this analysis, I chose Python as my second language. Aside from being a well-known language, the main reason is that it provides auxiliary functions such as lru_cache and cache in the built-in FuncTools library, greatly simplifying the implementation of dynamic programming. Moreover, it is the language I am most familiar with. This makes it easy for me to experiment with these built-in tools while using a language designed for rapid development and experimentation.
+For this analysis, I chose Python as my second language. Aside from being a well-known language, the main reason is that it provides auxiliary functions such as lru_cache and cache in the built-in FuncTools library, greatly simplifying the implementation of dynamic programming. Moreover, it is the language I am most familiar with. This makes it easier for me to experiment with these built-in tools while using a language designed for rapid development and experimentation.
 
 ## Empirical Data & Discussion 
 
