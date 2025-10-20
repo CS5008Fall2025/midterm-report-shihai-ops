@@ -52,7 +52,7 @@ def fib_iterative(n: int) -> int:
 
 def run_and_time(func: Callable, n: int, print_it: bool = False):
     global OPS
-    OPS = 0  
+    OPS = 0
     start = time.perf_counter()
     result = func(n)
     end = time.perf_counter()
