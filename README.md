@@ -92,10 +92,10 @@ return r[n]
 For this analysis, I chose Python as my second language. Aside from being a well-known language, the main reason is that it provides auxiliary functions such as lru_cache and cache in the built-in FuncTools library, greatly simplifying the implementation of dynamic programming. Moreover, it is the language I am most familiar with. The Pandas package is an excellent tool in this program when drawing a statistical diagram. These characters make it easier for me to experiment with these built-in tools while using a language designed for rapid development and experimentation.
 
 ## Empirical Data & Discussion 
-The text script is used the same test script provided in the example project. [test script](test_runner.py).
+The text script uses the same test script provided in the example project. [test script](test_runner.py).
 
-### Operations Comparsion
-The way to count the operation number is by adding a counter to functions in each different programs. The counter will add 1 when every operation has been made, such as a loop run once, or the function itself has been called once. 
+### Operations Comparison
+The way to count the operation number is by adding a counter to functions in each different program. The counter will add 1 when every operation has been made, such as a loop run once, or the function itself has been called once. 
 
 The first 40 rows of the triangle are shown in the chart below. If I set n > 40, the time consumed by the recursive method is very significant. Since it has an exponential growth in time complexity. The operation counts are the same in both C and Python. 
 
@@ -147,6 +147,10 @@ The first 40 rows of the triangle are shown in the chart below. If I set n > 40,
 The recursive version is the only version which runs at the time complexity of $O(2^n)$. 
 ![dynamic vs recursive](fib_recursive_dynamic_comparison.png) As the diagram shows the C is significantly faster than Python. (n = 40)
 
+### Overall
+The general situation is iterative method is slightly faster than the dynamic method and much faster than the recursive method. [fib_performance_comparison_python.png](fib_performance_comparison_python.png)
+
+
 ### Iterative and Dynamic Programming Versions
 After N>40, there is no data being tested on the Recursive method since the time complexity grows exponentially. ![fib_iter_dynamic_comparison.png](fib_iter_dynamic_comparison.png)
 You can see Python is slower than C, and the Dynamic Programming is slightly slower than the Iterative method. The Python run time jumps for several times is probably because I run Python in WSL VM which is not very stable when performing multi tasks. 
@@ -161,16 +165,38 @@ C is always faster than Python in all cases in this project, but the difference 
 C is a very challenging language. The data type, structs, and pointers, and heaps are very unfriendly to new learners.  Meanwhile, Python is much easier to get hands-on with new algorithms learned. I am more familiar with Python, so I always try to code with Python first, with pseudo-code provided by the lecturer. Once the Python version is done correctly, I will begin to work on the C version. 
 
 ### Language 1: C
-There are numerous problems with my coding. One of the hardest one during my coding is typedef uint64_t ull where the uint64_t in Windows is long long, while in Linux it is Long. I am compiling my code in WSL(Windows Subsystem for Linux) as I failed to install the C compiler in the Windows environment. When coding in Windows, the IDE won't show the error of the code, but it cannot compile in Linux environment. I have to change the format specifier to %lu, but this is not correct in Windows; however, it works in Linux. 
+There are numerous problems with my coding in C. One of the hardest one during my coding is typedef uint64_t ull, where the uint64_t in Windows is long long, while in Linux it is Long. I am compiling my code in WSL(Windows Subsystem for Linux) as I failed to install the C compiler in the Windows environment. When coding in Windows, the IDE won't show the error of the code, but it cannot compile in Linux environment. I have to change the format specifier to %lu, but this is not correct in Windows, and the IDE is warning; however, it works in Linux. 
 
 ### Language 2: Python
+Python is much easier, It is similar to pseudo code, so it is much easier to understand when trying to read others' code to learn. It has many good features such as you don't need to worry about pointers, stack, heap, and you don't need to declare variable types in advance. swap can be easily done like a, b = b, a. 
 
+To switch the recursion version to the dynamic version, we only need to add @cache. 
+```python
+def fib_r(n: int) -> int:
+    if n <= 1:
+        return n
+    return fib_r(n - 1) + fib_r(n - 2)
+```
 
+```python
+from functools import cache
+
+@cache
+def fib_dp(n: int) -> int:
+    if n <= 1:
+        return n
+    return fib_dp(n - 1) + fib_dp(n - 2)
+```
+
+The @cache can store the result of the function every time you run it. The code is the definition of the Fibonacci sequence; it is very easy to understand.
 
 ### Comparison and Discussion Between Experiences
-
+Although C is very fast, but in most modern computers this speed is very fast. Hence, in most cases it is not worth to trade runtime speed for the complexity of coding. 
 
 ## Conclusions / Reflection
+To sum up, for calculating the Fibonacci sequence, the naive recursive method is extremely inefficient due to its exponential time complexity, making it unsuitable for practical applications. The iterative method offers the best performance, with linear time complexity and constant space complexity. The dynamic programming (memoization) version is comparable in performance to the iterative method (both O(n)), and the code logic is closer to the mathematical definition. It is easier to implement in Python.
 
 ## References
 [1] Northeastern University. n.d. Memoization Example: Fibonacci Sequence (7–10). Retrieved October 19, 2025 from https://northeastern.instructure.com/courses/225849/pages/memoization-example-fibonacci-sequence-7-10?module_item_id=12387024
+
+
