@@ -96,17 +96,60 @@ For this analysis, I chose Python as my second language. Aside from being a well
 ### Operations Comparsion
 The way to count the operation number is by adding a counter to functions in each different programs. The counter will add 1 when every operation has been made, such as a loop run once, or the function itself has been called once. 
 
-The first 40 rows of the triangle are shown in the chart below. If I set n > 40, the time consumed by the recursive method is very significant. Since it has an exponential growth in time complexity. 
+The first 40 rows of the triangle are shown in the chart below. If I set n > 40, the time consumed by the recursive method is very significant. Since it has an exponential growth in time complexity. The operation counts are the same in both C and Python. 
 
 
 #### Operation Count
-[ops_fib_c_results.csv](ops_fib_c_results.csv)
+| **N** | **Iterative** | **Dynamic Programming** | **Recursive** |
+|---:|---:|---:|---:|
+| 1 | 0 | 0 | 0 |
+| 2 | 1 | 1 | 1 |
+| 3 | 2 | 2 | 2 |
+| 4 | 3 | 3 | 4 |
+| 5 | 4 | 4 | 7 |
+| 6 | 5 | 5 | 12 |
+| 7 | 6 | 6 | 20 |
+| 8 | 7 | 7 | 33 |
+| 9 | 8 | 8 | 54 |
+| 10 | 9 | 9 | 88 |
+| 11 | 10 | 10 | 143 |
+| 12 | 11 | 11 | 232 |
+| 13 | 12 | 12 | 376 |
+| 14 | 13 | 13 | 609 |
+| 15 | 14 | 14 | 986 |
+| 16 | 15 | 15 | 1596 |
+| 17 | 16 | 16 | 2583 |
+| 18 | 17 | 17 | 4180 |
+| 19 | 18 | 18 | 6764 |
+| 20 | 19 | 19 | 10945 |
+| 21 | 20 | 20 | 17710 |
+| 22 | 21 | 21 | 28657 |
+| 23 | 22 | 22 | 46368 |
+| 24 | 23 | 23 | 75025 |
+| 25 | 24 | 24 | 121393 |
+| 26 | 25 | 25 | 196418 |
+| 27 | 26 | 26 | 317811 |
+| 28 | 27 | 27 | 514229 |
+| 29 | 28 | 28 | 832040 |
+| 30 | 29 | 29 | 1346269 |
+| 31 | 30 | 30 | 2178309 |
+| 32 | 31 | 31 | 3524578 |
+| 33 | 32 | 32 | 5702887 |
+| 34 | 33 | 33 | 9227465 |
+| 35 | 34 | 34 | 14930352 |
+| 36 | 35 | 35 | 24157817 |
+| 37 | 36 | 36 | 39088169 |
+| 38 | 37 | 37 | 63245986 |
+| 39 | 38 | 38 | 102334155 |
+| 40 | 39 | 39 | 165580141 |
+### Recursive Versions
+The recursive version is the only version which runs at the time complexity of $O(2^n)$. 
 
 ## Language Analysis
 
 
 ### Language 1: C
-
+C is always faster than Python in all cases, but the difference is not significant compared to the different method you use to solve the Fibonacci sequence. 
 
 
 ### Language 2: UPDATE
