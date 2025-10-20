@@ -155,11 +155,13 @@ The code writing files are shown below:
 * [fibonacci.c](fibonacci.c)  -- implements fibonacci in C. 
 * [fibonacci.py](fibonacci.py)    -- implements fibonacci in python. 
 * [test_runner.py](test_runner.py)    -- check ogs and timings and output to .csv
+
+C is always faster than Python in all cases in this project, but the difference is not significant compared to the different method you use to solve the Fibonacci sequence. 
+
 C is a very challenging language. The data type, structs, and pointers, and heaps are very unfriendly to new learners.  Meanwhile, Python is much easier to get hands-on with new algorithms learned. I am more familiar with Python, so I always try to code with Python first, with pseudo-code provided by the lecturer. Once the Python version is done correctly, I will begin to work on the C version. 
 
 ### Language 1: C
-C is always faster than Python in all cases in this project, but the difference is not significant compared to the different method you use to solve the Fibonacci sequence. 
-
+There are numerous problems with my coding. One of the hardest one during my coding is typedef uint64_t ull where the uint64_t in Windows is long long, while in Linux it is Long. I am compiling my code in WSL(Windows Subsystem for Linux) as I failed to install the C compiler in the Windows environment. When coding in Windows, the IDE won't show the error of the code, but it cannot compile in Linux environment. I have to change the format specifier to %lu, but this is not correct in Windows; however, it works in Linux. 
 
 ### Language 2: Python
 
