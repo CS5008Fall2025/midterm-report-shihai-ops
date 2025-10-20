@@ -71,7 +71,22 @@ Since the memorization technique reduced the duplicated calculation in the recur
 ![Recurrence Tree](recurrenceTree2exp.png) [1]
 
 
-The dynamic planning version stores the calculation results for each Fib(i). When a value is needed again, it can be fetched directly from storage at constant time without recalculation. This effectively cuts out the duplicate recursive branches, reducing time complexity to O(n), and the result for each level of the tree is stored in memory; hence, it requires memory complexity of O(n) to store it.
+The dynamic planning version stores the calculation results for each Fib(i). When a value is needed again, it can be fetched directly from storage at constant time without recalculation. This effectively cuts out the duplicate recursive branches, reducing time complexity to O(n), and the result for each level of the tree is stored in memory; hence, it requires memory complexity of O(n) to store it. 
+The pseudocode for the dynamic programming version is as follows:
+
+r = array from [0..n]
+n = nth fibonacci number
+```markdown
+FIBONACCI(n, r)
+if r[n] != 0:
+    return r[n]
+if n <= 1
+    r[n] = n
+else
+    r[n] = FIBONACCI(n-1, r) + FIBONACCI(n-2, r)
+return r[n]
+```  [1]
+
 
 For this analysis, I chose Python as my second language. Aside from being a well-known language, the main reason is that it provides auxiliary functions such as lru_cache and cache in the built-in FuncTools library, greatly simplifying the implementation of dynamic programming. Moreover, it is the language I am most familiar with. This makes it easier for me to experiment with these built-in tools while using a language designed for rapid development and experimentation.
 
