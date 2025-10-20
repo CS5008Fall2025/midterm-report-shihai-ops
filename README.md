@@ -191,13 +191,15 @@ def fib_dp(n: int) -> int:
 The @cache can store the result of the function every time you run it. The code is the definition of the Fibonacci sequence; it is very easy to understand.
 
 ### Comparison and Discussion Between Experiences
-Although C is very fast, but in most modern computers this speed is very fast. Hence, in most cases it is not worth to trade runtime speed for the complexity of coding. 
+Although C is very fast, but in most modern computers this speed is very fast. Hence, in most cases it is not worth to trade runtime speed for the complexity of coding. (Embedded system excluded)
 
 ## Conclusions / Reflection
 To sum up, for calculating the Fibonacci sequence, the naive recursive method is extremely inefficient due to its exponential time complexity, making it unsuitable for practical applications. The iterative method offers the best performance, with linear time complexity and constant space complexity. The dynamic programming (memoization) version is comparable in performance to the iterative method (both O(n)), and the code logic is closer to the mathematical definition. It is easier to implement in Python.
 
 ## References
 [1] Northeastern University. n.d. Memoization Example: Fibonacci Sequence (7–10). Retrieved October 19, 2025 from https://northeastern.instructure.com/courses/225849/pages/memoization-example-fibonacci-sequence-7-10?module_item_id=12387024
+
 [2] LeetCode. n.d. Fibonacci Number — Solutions. Retrieved October 19, 2025, from https://leetcode.com/problems/fibonacci-number/solutions/
+
 [3] opes. 2012. How does the fibonacci recursive function “work”? Stack Overflow. Retrieved October 19, 2025, from https://stackoverflow.com/questions/8845154/how-does-the-fibonacci-recursive-function-work
 
