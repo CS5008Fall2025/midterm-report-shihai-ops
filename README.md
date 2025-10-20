@@ -22,7 +22,32 @@ There are many ways we can implement the Fibonacci sequence in code, which will 
 | Recursive | $O(2^n)$  | $O(n)$ |
 | Dynamic Programming | $O(n)$ | $O(n)$ |
 
-The iterative version uses only one loop, calculating each number from scratch, so the time complexity is O(n). It only needs to store the first two digits, so the spatial complexity is O(1). The pseudocode for the recursive version is as follows:
+The iterative version uses only one for loop, calculating each number from scratch, so the time complexity is O(n). It only needs to store the first two digits, so the spatial complexity is O(1). 
+The pseudocode for the iterative method version is as follows:
+```Plaintext
+FUNCTION Fib_iter(n)
+    IF n <= 1 THEN
+        RETURN n
+    END IF
+
+    a ← 0
+    b ← 1
+
+    FOR i ← 2 TO n DO
+        temp ← a + b
+        a ← b
+        b ← temp
+    END FOR
+
+    RETURN b
+END FUNCTION
+```
+The recursive version uses a recurrence tree as below
+
+![Recurrence Tree](recurrenceTree.png)
+
+
+The pseudocode for the recursive version is as follows:
 ```Plaintext
 Function Fib(n)
     if n <= 1: return n
