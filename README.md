@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/kdfTwECC)
 # Midterm p1: Report on Analysis of Fibonacci  Series
 * **Author**: Haisheng Shi
-* **GitHub Repo**: [linke to github repo with this report]
+* **GitHub Repo**: https://github.com/CS5008Fall2025/midterm-report-shihai-ops
 * **Semester**: Fall 2025
 * **Languages Used**: c, Python
 
